@@ -10,26 +10,101 @@
 </head>
 
 <body>
-    <header class="flex justify-between pt-3 px-7 items-center bg-teal-600  ">
-       <div class="flex items-end">
-  <p class="font-bold text-5xl text-amber-200">S</p>
-  <p class="text-4xl text-orange-100 font-extrabold relative bottom-2 right-3">H</p>
-</div>
+    <header class="flex justify-between pt-3 px-7 items-center bg-teal-800 md:py-5 ">
+        <div class="flex items-end">
+            <p class="font-bold text-5xl text-amber-200">S</p>
+            <p class="text-4xl text-orange-100 font-extrabold relative bottom-2 right-3">H</p>
+        </div>
 
-        <nav class="flex justify-center gap-5 text-amber-50 hover:text-teal-800 md:text-lg ">
+        <nav class="flex justify-center gap-5 text-amber-50 hover:text-amber-100 md:text-lg ">
             <a href="#home">Home</a>
             <a href="#Categories">Categories</a>
             <a href="#about us">About Us</a>
             <a href="#contact">Contact us</a>
         </nav>
 
-        <div class="bg-gray-300  rounded-3xl w-40 h-9">
-            <i class="fa-solid fa-magnifying-glass relative left-32 top-2"></i>
+        <div class="flex gap-2 text-amber-50">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <i class="fa-regular fa-circle-user"></i>
         </div>
 
     </header>
 
 
+    <main>
+        <section class="bg-teal-600 py-7 min-h-screen md:py-36 px-6 text-center">
+            <h1 class="text-lg md:text-5xl font-bold text-amber-50 mb-3 pt-12 md:pt-16 text-center">Everything you need, all in one place
+            </h1>
+            <p class="text-teal-100 text-xs md:text-2xl my-6 ">Browse thousands of products across every category</p>
+            <input id="searchInput" type="text" placeholder="Search products..."
+                class="w-full max-w-md mx-auto text-xs md:text-lg rounded-lg px-4 py-3" />
+
+            <button id="searchProduct"
+                class="rounded-lg border border-teal-300 py-3 px-8 text-amber-50 font-bold bg-teal-800">Search</button>
+        </section>
+
+        <section>
+            <h2 class="text-xl md:text-3xl font-bold text-teal-800 p-5">Categories</h2>
+
+            <div id="categories" class="flex flex-wrap gap-3 text-xs md:text-lg justify-center my-6">
+
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-xl md:text-3xl font-bold text-teal-800 p-5">All Products</h2>
+
+            <div id="products" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+
+            </div>
+
+
+            <div class="flex justify-center gap-4 my-8">
+
+                <button id="prevBtn" class="bg-teal-800 text-white px-5 py-2 rounded">
+                    Previous
+                </button>
+
+                <button id="nextBtn" class="bg-teal-800 text-white px-5 py-2 rounded">
+                    Next
+                </button>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="flex justify-between pt-3 px-7 items-center bg-teal-800 md:py-5 ">
+        <div class="flex items-end">
+            <p class="font-bold text-5xl text-amber-200">S</p>
+            <p class="text-4xl text-orange-100 font-extrabold relative bottom-2 right-3">H</p>
+        </div>
+
+        <div class=" text-amber-50 hover:text-amber-100 md:text-sm ">
+            <h3 class="text-lg font-bold">
+                </h3class>SHOP HUB</h3>
+            <p>Home</p>
+            <p>About US</p>
+            <p>Careers</p>
+            <p>Contact Us</p>
+            </div>
+
+        <div class=" text-amber-50 hover:text-amber-100 md:text-sm ">
+            <h3 class="text-lg font-bold">Payments</h3>
+            <p>Verve</p>
+            <p>Master</p>
+            <p>Visa</p>
+            <p>POD</p>
+
+        </div>
+
+        <div class="text-amber-50 hover:text-amber-100 md:text-sm ">
+            <a href="admin.html">Admin Dashboard</a>
+        </div>
+
+    </footer>
+
+    <script src="sandBox.js"></script>
 </body>
 
 </html>
