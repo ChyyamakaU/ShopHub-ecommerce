@@ -1,36 +1,74 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Admin Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/src/output.css">
 </head>
 
 <body>
+    <header class="flex justify-between pt-3 px-7 items-center bg-teal-800 md:py-5 ">
+        <a href="index.html">
+            <div class="flex items-end">
+                <p class="font-bold text-5xl text-amber-200">S</p>
+                <p class="text-4xl text-orange-100 font-extrabold relative bottom-2 right-3">H</p>
+            </div>
+        </a>
 
-    <h1>Admin Dashboard</h1>
+        <nav class="flex justify-center gap-5 text-amber-50 hover:text-amber-100 md:text-lg ">
+            <a href="index.html">Home</a>
+            <a href="#Categories">Categories</a>
+            <a href="#about us">About Us</a>
+            <a href="#contact">Contact us</a>
+        </nav>
+    </header>
 
-    <div>
-        <input id="productTitle" placeholder="Product name">
+    <main>
+
+    <h1 class="text-2xl px-6 mt-10 font-bold">Admin Dashboard</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xl font-bold text-teal-900 ">
+        <input class="px-6" id="productTitle" placeholder="Product name">
 
         <input id="productPrice" placeholder="Price">
 
         <button id="addProduct">
             Add Product
         </button>
+
     </div>
 
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
 
-    <h2>Products</h2>
+        <div class="bg-teal-50 border border-teal-100 rounded-xl p-4">
+            <p class="text-teal-600 text-sm">Total products</p>
+            <p id="totalProducts" class="text-teal-900 text-2xl font-bold">0</p>
+        </div>
 
-    <div id="adminProducts"></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4">
+            <p class="text-amber-600 text-sm">Total inventory value</p>
+            <p id="totalValue" class="text-amber-800 text-2xl font-bold">$0.00</p>
+        </div>
+
+        <div class="bg-orange-50 border border-orange-100 rounded-xl p-4">
+            <p class="text-orange-600 text-sm">Admin actions logged</p>
+            <p id="totalActions" class="text-orange-800 text-2xl font-bold">0</p>
+        </div>
+
+    </div>
+    <h2 class="px-6">Products</h2>
+
+    <div class="px-6" id="adminProducts"></div>
 
 
-    <h2>Activity Log</h2>
+    <h2 class="px-6">Activity Log</h2>
 
     <div id="activityLog"></div>
 
 
     <script src="admin.js"></script>
+</main>
 
 </body>
 
