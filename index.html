@@ -10,28 +10,35 @@
 </head>
 
 <body>
-    <header class="flex justify-between pt-3 px-7 items-center bg-teal-800 md:py-5 ">
-        <a href="index.html">
-            <div class="flex items-end">
-                <p class="font-bold text-5xl text-amber-200">S</p>
-                <p class="text-4xl text-orange-100 font-extrabold relative bottom-2 right-3">H</p>
+    <header class="bg-teal-800 px-5 py-3 md:px-7 md:py-5">
+        <div class="flex items-center justify-between">
+            <a href="index.html">
+                <div class="flex items-end">
+                    <p class="font-bold text-5xl text-amber-200">S</p>
+                    <p class="text-4xl text-orange-100 font-extrabold relative bottom-2 right-3">H</p>
+                </div>
+            </a>
+
+            <nav class="flex gap-6 text-amber-50 text-lg">
+                <a href="index.html" class="hover:text-amber-200">Home</a>
+                <a href="#Categories" class="hover:text-amber-200">Categories</a>
+                <a href="#about-us" class="hover:text-amber-200">About Us</a>
+                <a href="#contact" class="hover:text-amber-200">Contact Us</a>
+            </nav>
+
+            <div class="flex items-center gap-5 text-amber-50">
+                <button id="cartButton" class="relative">
+                    <i class="fa-solid fa-cart-arrow-down text-xl"></i>
+                    <span id="cartCount"
+                        class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1.5"> 0 </span>
+                </button>
+                <a href="admin.html">
+                    <i class="fa-regular fa-circle-user text-xl"></i>
+                </a>
+                <!-- <button id="menuButton" class=" block md:hidden  text-2xl"> 
+        <i class="fa-solid fa-bars"></i> 
+      </button>  -->
             </div>
-        </a>
-
-        <nav class="flex justify-center gap-5 text-amber-50 hover:text-amber-100 md:text-lg ">
-            <a href="index.html">Home</a>
-            <a href="#Categories">Categories</a>
-            <a href="#about us">About Us</a>
-            <a href="#contact">Contact us</a>
-        </nav>
-
-        <div class="flex gap-4 text-amber-50 items-center">
-            <button id="cartButton" class="relative ">
-                <i class="fa-solid fa-cart-arrow-down"></i>
-                <span id="cartCount"
-                    class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1.5">0</span>
-            </button>
-           <a href="admin.html"> <i class="fa-regular fa-circle-user"></i></a>
         </div>
 
     </header>

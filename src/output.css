@@ -274,6 +274,9 @@
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
@@ -334,6 +337,9 @@
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .flex-col {
+    flex-direction: column;
+  }
   .flex-wrap {
     flex-wrap: wrap;
   }
@@ -366,6 +372,11 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
+  }
+  :where(.space-y-3 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
   }
   .overflow-y-auto {
     overflow-y: auto;
@@ -650,6 +661,9 @@
     .hover\:text-amber-100:hover {
       color: var(--color-amber-100);
     }
+    .hover\:text-amber-200:hover {
+      color: var(--color-amber-200);
+    }
   }
   @media (width >= 48rem) {
     .md\:block {
@@ -658,16 +672,14 @@
     .md\:flex {
       display: flex;
     }
-    .md\:grid {
-      display: grid;
-    }
-    @media (width >= 48rem) {
-      .md\:md\:flex {
-        display: flex;
-      }
+    .md\:hidden {
+      display: none;
     }
     .md\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .md\:px-7 {
+      padding-inline: calc(var(--spacing) * 7);
     }
     .md\:py-5 {
       padding-block: calc(var(--spacing) * 5);
@@ -700,10 +712,18 @@
     }
   }
   @media (width >= 64rem) {
+    .lg\:hidden {
+      display: none;
+    }
     .lg\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -787,6 +807,7 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;

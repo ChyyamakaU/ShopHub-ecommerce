@@ -15,6 +15,13 @@ const closeCartBtn = document.getElementById("closeCartBtn");
 const cartItemsContainer = document.getElementById("cartItems");
 const cartTotalEl = document.getElementById("cartTotal");
 
+const menuButton = document.getElementById("menuButton");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function saveCart() {
